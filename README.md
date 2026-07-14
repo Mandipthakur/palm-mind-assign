@@ -127,13 +127,15 @@ Chunking logic is covered by pure-unit tests with no external services required:
 pytest tests/ -v
 ```
 
-## Notes / trade-offs
+## Results
 
 - SQL Server is used for zero-setup local development; `DATABASE_URL` can be
   pointed at Postgres/MySQL without code changes (SQLAlchemy handles the
   dialect).
-- Booking date/time normalization relies on the LLM extraction step; for a
-  production system this would be backed by a proper date-parsing library
-  (e.g. `dateparser`) as a secondary validation layer.
-- No UI is included per the task constraints — all interaction is via the
-  two REST APIs (see `/docs` for interactive Swagger UI).
+
+  ![Swagger UI](images/db1.png)
+  ![Swagger UI](images/db2.png)
+  ![Swagger UI](images/chat1.png)
+  ![Swagger UI](images/chat1.2.png)
+  ![Swagger UI](images/swaggerUI1.png)
+  ![Swagger UI](images/ingestion1.2.png)
